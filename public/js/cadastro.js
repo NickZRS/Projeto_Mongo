@@ -49,41 +49,8 @@ fetch(`${urlBase}/usuarios`, {
 
 })
 
-async function carregaUsers() {
-    const tabela = document.getElementById('dadosTabela')
-    tabela.innerHTML = '' //Limpa a tabela antes de recarregar
-    // Fazer a solicitação GET para o endpoint dos livros
-    await fetch(`${urlBase}/usuarios`, {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json",
-            "access-token": access_token //envia o token na requisição
-        }
-    })
-        .then(response => response.json())
-        .then(data => {
 
-            data.forEach(usuario => {
-
-                tabela.innerHTML += `
-                <tr>
-                   <td>${usuario.nome}</td>
-                   <td>${usuario.email}</td>
-
-                   <td>
-                       <button class='btn btn-danger btn-sm' onclick='removeUser("${usuario._id}")'>🗑 Excluir </button>
-                    </td>           
-                </tr>
-                `
-            })
-        })
-        .catch(error => {
-            document.getElementById("mensagem").innerHTML = `<span class='text-danger'>Erro ao carregar: ${error.message}</span>`
-            resultadoModal.show();
-        });
-}
-
-async function removeUser(id) {
+async function removeUsuario(id) {
     if (confirm('Deseja realmente excluir o usuario?')) {
         await fetch(`${urlBase}/usuarios/${id}`, {
             method: "DELETE",
@@ -100,7 +67,7 @@ async function removeUser(id) {
                 }
             })
             .catch(error => {
-                document.getElementById("mensagem").innerHTML = `<span class='text-danger'>Erro ao carregar: ${error.message}</span>`
+                document.getElementById("mensagem").innerHTML = `<span class='text-danger'>Erro ao carregar usuário: ${error.message}</span>`
                 resultadoModal.show();
             });
     }
