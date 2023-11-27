@@ -1,0 +1,53 @@
+// Teste das Requisções REST dos prestadores
+@baseURL = http://localhost:4000/api/agenda
+
+// GET - Lista de toda a agenda
+GET {{baseURL}}
+Content-Type: application/json 
+
+###
+//GET - Lista um evento pelo id
+
+GET {{baseURL}}/id/654186ce15c5cc8aa1e8b590
+
+###
+//GET - Lista um evento pelo titulo
+
+GET {{baseURL}}/titulo/Tomorrowland
+
+###
+// DELETE - Apaga um evento pelo id 
+
+DELETE {{baseURL}}/6515ee92845abda2f79b47ed
+Content-Type: application/json
+
+###
+// POST - Insere um novo registro
+
+POST {{baseURL}}
+Content-Type: application/json
+
+{
+    "titulo" : "Tomorrowland 2024",
+    "data" : "12 10 2024",
+    "local" : "Itu MAEDA",
+    "descricao" : "Maior festival de eletronica do mundo",
+    "participantes" : "Alok",
+    "custo" : "3300.00"
+}
+
+###
+//PUT - ALtera o registro
+
+PUT {{baseURL}}
+Content-Type: application/json
+
+{
+    "_id": "654186ce15c5cc8aa1e8b590",
+    "titulo": "Tomorrowland 2.0",
+    "data": "12-10-2023",
+    "local": "Itu",
+    "descricao": "Maior festival de eletronica do mundo",
+    "participantes": "Alok",
+    "custo": "3000.00"
+  }

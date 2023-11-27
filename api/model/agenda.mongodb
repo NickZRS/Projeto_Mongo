@@ -1,0 +1,21 @@
+use('FatecItu')
+
+db.agenda.insertOne({
+    "titulo" : "Conferência de Tecnologia",
+    "data" : "10-07-2023",
+    "local" : "Itu",
+    "descricao" : "IAs do Futuro",
+    "participantes" : "Elon Musk",
+    "custo" : "150.00"
+})
+
+use('FatecItu')
+
+db.agenda.insertOne({
+    "titulo" : "Tomorrowland",
+    "data" : "12-10-2023",
+    "local" : "Itu",
+    "descricao" : "Maior festival de eletronica do mundo",
+    "participantes" : "Alok",
+    "custo" : "3000.00"
+})
