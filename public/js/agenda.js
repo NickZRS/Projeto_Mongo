@@ -1,4 +1,4 @@
-const urlBase = 'https://projeto-mongo-bd.vercel.app/'
+const urlBase = 'https://projeto-mongo-bd.vercel.app/api'
 
 const resultadoModal = new bootstrap.Modal(document.getElementById("modalMensagem"))
 const access_token = localStorage.getItem("token") || null
