@@ -1,4 +1,4 @@
-const urlBase = 'https://projeto-mongo.vercel.app/'
+const urlBase = 'https://projeto-mongo-bd.vercel.app/'
 
 document.addEventListener("DOMContentLoaded", function () {
     // Verifique se o token existe no localStorage
