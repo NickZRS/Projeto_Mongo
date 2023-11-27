@@ -1,5 +1,5 @@
 // Teste das Requisções REST dos prestadores
-@baseURL = http://localhost:4000/api/agenda
+@baseURL = https://projeto-mongo-bd.vercel.app/api/agenda
 
 // GET - Lista de toda a agenda
 GET {{baseURL}}
