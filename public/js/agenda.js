@@ -1,7 +1,8 @@
-//const urlBase = 'https://backend-mongodb-pi.vercel.app/api'
-const urlBase = 'http://localhost:4000/api'
+const urlBase = 'https://projeto-mongo.vercel.app/'
+
 const resultadoModal = new bootstrap.Modal(document.getElementById("modalMensagem"))
 const access_token = localStorage.getItem("token") || null
+
 
 
 //evento submit do formulário

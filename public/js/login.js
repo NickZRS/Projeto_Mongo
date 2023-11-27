@@ -1,5 +1,8 @@
-//const urlBase = 'https://projeto-mongodb-3xtk2uj1w-nickzrs.vercel.app//api'
-const urlBase = 'http://localhost:4000/api'
+const urlBase = 'https://projeto-mongo.vercel.app/'
+
+
+
+
 document.getElementById("loginForm").addEventListener("submit", function (event) {
     event.preventDefault()
     const login = document.getElementById("login").value

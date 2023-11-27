@@ -10,7 +10,7 @@ import rotasUsuarios from './routes/usuario.js'
 
 
 app.use(cors({
-    origin: ['http://127.0.0.1:5500','http://localhost:4000'] //informe outras URL´s se necessário
+    origin: ['http://127.0.0.1:5500','http://localhost:4000', 'https://projeto-mongo.vercel.app/'] //informe outras URL´s se necessário
   }));
 app.use(express.json()) // irá fazer o parse de arquivos JSON
 

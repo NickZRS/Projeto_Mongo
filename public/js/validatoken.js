@@ -1,3 +1,5 @@
+const urlBase = 'https://projeto-mongo.vercel.app/'
+
 document.addEventListener("DOMContentLoaded", function () {
     // Verifique se o token existe no localStorage
     const token = localStorage.getItem("token");
