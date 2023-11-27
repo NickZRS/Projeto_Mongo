@@ -3,7 +3,7 @@ const urlBase = 'https://projeto-mongo-bd.vercel.app/api'
 
 
 
-document.getElementById("cadastroForm").addEventListener("submit", function (event) {
+document.getElementById("cadForm").addEventListener("submit", function (event) {
     event.preventDefault()
     const nome = document.getElementById("nome").value
     const login = document.getElementById("login").value
@@ -48,27 +48,3 @@ fetch(`${urlBase}/usuarios`, {
     });
 
 })
-
-
-async function removeUsuario(id) {
-    if (confirm('Deseja realmente excluir o usuario?')) {
-        await fetch(`${urlBase}/usuarios/${id}`, {
-            method: "DELETE",
-            headers: {
-                "Content-Type": "application/json",
-                "access-token": access_token //envia o token na requisição
-            }
-        })
-            .then(response => response.json())
-            .then(data => {
-                if (data.deletedCount > 0) {
-                    //alert('Registro Removido com sucesso')
-                    carregaUsers() // atualiza a UI
-                }
-            })
-            .catch(error => {
-                document.getElementById("mensagem").innerHTML = `<span class='text-danger'>Erro ao carregar usuário: ${error.message}</span>`
-                resultadoModal.show();
-            });
-    }
-}
